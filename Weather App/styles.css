@@ -1,0 +1,326 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+
+
+body{
+    background-image: url('img/background_photo.jpg');
+    background-size: cover; /* Фон буде покривати всю площу екрану */
+    background-position: center center; /* Центруємо фон */
+    background-attachment: fixed; /* Фон не буде прокручуватись при скролінгу */
+    margin: 0; /* Забираємо відступи, щоб фон займав всю площу */
+    height: 100%; /* Встановлюємо висоту для покриття всього екрану */
+}
+.window{
+    position: relative;
+   margin: 0 auto;
+   margin-top: 170px;
+    width: 35%;
+    height: 600px;
+    background-color: rgba(180, 180, 180, 0.8);
+    border-radius: 20px;
+}
+.loading_logo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup {
+    position: absolute;
+    display: none;
+    top: 85px;
+    right: 30px;
+    width: 60%;
+    background-image: url('img/moss-6649862_1280.jpg');
+    background-size: cover; /* Покриває весь екран */
+    background-position: center; /* Центрує фон */
+    background-repeat: no-repeat; /* Запобігає повторенню */
+    border-radius: 10px;
+    
+    
+}
+.form {
+    /* margin-top: 10%; */
+}
+.form-group {
+    display: flex;
+    justify-content: space-between; /* Розташування полів по краях */
+    padding: 10px 10px
+}
+.popup_active{
+    display: block;
+}
+.form-input {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    padding: 0px 6px;
+    font-size: 20px;
+    transition: all 0.7s;
+    
+}
+
+.form-input::placeholder{
+    font-size: 19px;
+    letter-spacing: 4px;
+    color: black;
+}
+.form-input:focus{
+    background-color: rgb(239, 247, 243);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 1); /* Сильніша тінь */  
+}
+
+
+.form-submit {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    text-align: center;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+.form-submit:active{
+transform: scale(0.99);
+box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); 
+background-color: rgb(239, 247, 243);
+}
+
+.container {
+    padding: 30px;
+}
+.top {
+}
+.bottom {
+}
+.inf_weather_place {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding: 10px 15px;
+    color: aliceblue;
+    background-color: rgba(26, 26, 26, 0.7);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.weather_place {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 10px 15px;
+    color: aliceblue;
+    background-color: rgba(26, 26, 26, 1);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.top_img_time {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+   
+}
+.top_img_time_block_01 {
+    display: flex;
+    flex: 0 1 50%;
+    flex-direction: column;
+    
+    
+}
+.weather_conditions_img {
+    width: 50%;
+    height: 100px;
+    object-fit: contain;
+}
+.weather_conditions{
+    margin: 50px 10px;
+    font-size: 20px;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.507);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+}
+
+.top_img_time_block_02 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+    justify-content: center;
+    align-items: end;
+}
+.top_img_time_block_02_mini{
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: aliceblue;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.top_time {
+  
+    margin-left: 20px;
+}
+.top_as_of{
+   
+    
+}
+.weather_temperature{
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 3px;  
+    background-color: aliceblue;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.weather_temperature span{
+    font-size: 30px; 
+}
+
+
+
+
+.description_style{
+    font-size: 22px;
+    font-weight: bold;
+   
+}
+.top_02 {
+    margin-top: 50px;
+}
+.top_block_01 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.top_block_01_for_img_01 {
+    width: 10%;
+    height: 30px;
+}
+.top_block_01_for_img_01 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.top_block_for_text {
+    margin-left: 5px;
+    
+}
+.top_block_01_text_01 {
+}
+.description_style {
+}
+.top_block_01_text_02 {
+}
+.top_block_01_for_img_02 {
+}
+.top_block_01_for_text_02 {
+}
+.top_block_01_text_03 {
+}
+.top_block_01_text_04 {
+}
+.top_block_02 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.top_block_02_for_img_01 {
+}
+.top_block_02_for_text_01 {
+}
+.top_block_02_text_01 {
+}
+.top_block_02_text_02 {
+}
+.top_block_02_for_img_02 {
+}
+.top_block_02_for_text_02 {
+}
+.top_block_02_text_03 {
+}
+.top_block_02_text_04 {
+}
+.top_block_03 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.top_block_03_for_img_01 {
+}
+.top_block_03_for_text_01 {
+}
+.top_block_03_text_01 {
+}
+.top_block_03_text_02 {
+}
+.top_block_03_for_img_02 {
+}
+.top_block_03_for_text_02 {
+}
+.top_block_03_text_03 {
+}
+.top_block_03_text_04 {
+}
+
+
+.top_block_sub_block{
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 50%;
+    padding: 10px 20px;
+    background-color: rgba(82, 80, 80, 0.5)
+;    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+   
+    
+}
+
+.top_block_for_img{
+    width: 40px;
+    height: 40px;
+    
+}
+.top_block_img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.des_icon__mini{
+    font-size: 18px;
+}
+.des_text{
+    font-size: 20px;
+}
+
+.des_inf{
+    font-size: 25px;
+}
